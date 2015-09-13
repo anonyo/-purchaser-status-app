@@ -23,7 +23,7 @@ describe Purchase do
       expect(@purchase_in_progress.status).to eq 'in_progress'
     end
     it 'returns purchases in progress' do
-      expect(Purchase.in_progress).to eq [@purchase_in_progress]
+      expect(Purchase.in_progress).to include @purchase_in_progress
     end
   end
 
@@ -32,7 +32,7 @@ describe Purchase do
       expect(@submitted_purchase.status).to eq 'submitted'
     end
     it 'returns purchases in progress' do
-      expect(Purchase.submitted).to eq [@submitted_purchase]
+      expect(Purchase.submitted).to include @submitted_purchase
     end
   end
 
@@ -41,7 +41,7 @@ describe Purchase do
       expect(@submitted_purchase.status).to eq 'submitted'
     end
     it 'returns purchases in progress' do
-      expect(Purchase.submitted).to eq [@submitted_purchase]
+      expect(Purchase.submitted).to include @submitted_purchase
     end
   end
 
@@ -50,7 +50,7 @@ describe Purchase do
       expect(@shipped_purchase.status).to eq 'shipped'
     end
     it 'returns purchases in progress' do
-      expect(Purchase.all_shipped).to eq [@shipped_purchase]
+      expect(Purchase.all_shipped).to include @shipped_purchase
     end
   end
 
@@ -59,7 +59,7 @@ describe Purchase do
       expect(@received_purchase.status).to eq 'received'
     end
     it 'returns purchases in progress' do
-      expect(Purchase.all_received).to eq [@received_purchase]
+      expect(Purchase.all_received).to include @received_purchase
     end
   end
 end
