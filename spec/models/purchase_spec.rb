@@ -18,7 +18,7 @@ describe Purchase do
     end
   end
 
-  describe '#in_progress' do
+  describe '.in_progress' do
     it 'returns purchase status as in_progress' do
       expect(@purchase_in_progress.status).to eq 'in_progress'
     end
@@ -27,7 +27,7 @@ describe Purchase do
     end
   end
 
-  describe '#submitted' do
+  describe '.submitted' do
     it 'returns purchase status as submitted' do
       expect(@submitted_purchase.status).to eq 'submitted'
     end
@@ -36,7 +36,7 @@ describe Purchase do
     end
   end
 
-    describe '#submitted' do
+    describe '.submitted' do
     it 'returns purchase status as submitted' do
       expect(@submitted_purchase.status).to eq 'submitted'
     end
@@ -45,7 +45,7 @@ describe Purchase do
     end
   end
 
-  describe '#all_shipped' do
+  describe '.all_shipped' do
     it 'returns purchase status as shipped' do
       expect(@shipped_purchase.status).to eq 'shipped'
     end
@@ -54,7 +54,7 @@ describe Purchase do
     end
   end
 
-  describe '#all_received' do
+  describe '.all_received' do
     it 'returns purchase status as received' do
       expect(@received_purchase.status).to eq 'received'
     end
