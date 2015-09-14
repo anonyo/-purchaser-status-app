@@ -1,17 +1,11 @@
 class Purchase < ActiveRecord::Base
-  def self.all_pending
-    where(status: 'pending')
-  end
-  def self.all_in_progress
-    where(status: 'in_progress')
-  end
-  def self.all_submitted
-    where(status: 'submitted')
-  end
-  def self.all_shipped
-    where(status: 'shipped')
-  end
-  def self.all_received
-    where(status: 'received')
+  STATUSES = %w(pending in_progress submitted shipped received)
+
+  class << self
+    STATUSES.each do |status_name|
+      define_method "all_#{status_name}" do
+        where(status: status_name)
+      end
+    end
   end
 end
