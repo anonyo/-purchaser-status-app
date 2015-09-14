@@ -2,10 +2,10 @@ class Purchase < ActiveRecord::Base
   def self.all_pending
     where(status: 'pending')
   end
-  def self.in_progress
+  def self.all_in_progress
     where(status: 'in_progress')
   end
-  def self.submitted
+  def self.all_submitted
     where(status: 'submitted')
   end
   def self.all_shipped
