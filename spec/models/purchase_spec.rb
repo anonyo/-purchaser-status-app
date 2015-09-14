@@ -2,11 +2,11 @@ require 'rails_helper'
 
 describe Purchase do
   before do
-    @pending_purchase = FactoryGirl.create(:purchase)
-    @purchase_in_progress = FactoryGirl.create(:purchase, :in_progress)
-    @submitted_purchase = FactoryGirl.create(:purchase, :submitted)
-    @shipped_purchase = FactoryGirl.create(:purchase, :shipped)
-    @received_purchase = FactoryGirl.create(:purchase, :received)
+    @pending_purchase = create(:purchase)
+    @purchase_in_progress = create(:purchase, :in_progress)
+    @submitted_purchase = create(:purchase, :submitted)
+    @shipped_purchase = create(:purchase, :shipped)
+    @received_purchase = create(:purchase, :received)
   end
 
   describe '#all_pending' do
