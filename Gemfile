@@ -13,6 +13,8 @@ group :development, :test do
   gem 'rspec-rails', '>= 2.14'
 end
 
+gem 'pry', :group => :development
+
 group :test do
   gem 'database_cleaner'
   gem 'capybara'
