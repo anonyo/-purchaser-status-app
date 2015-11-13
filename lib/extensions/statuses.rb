@@ -1,4 +1,3 @@
-require 'pry'
 class ActiveRecord::Base
   def self.has_statuses(*status_names)
     status_names.each do |status_name|
